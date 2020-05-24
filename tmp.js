@@ -1,43 +1,48 @@
 "use strict";
 
-let num = 20;
+const options = {
+    name: 'test',
+    width: 1024,
+    height: 1024,
+    colors: {
+        border: 'black',
+        bg: 'red'
+    },
+    makeTest: function() {
+        console.log('Test');
+    }
+};
 
-function showFirstMessage(text) {
-    console.log(text);
-    let num =10;
-    console.log(num);
-}
+options.makeTest();
 
-showFirstMessage("Hello World!");
-console.log(num);
+const {border, bg} = options.colors;
+console.log(border);
 
-// function calc(a, b) {
-//     return a + b;
+// console.log(Object.keys(options).length);
+
+
+
+// console.log(options['colors']["border"]);
+
+// delete options.name;
+
+// console.log(options);
+
+// let counter = 0;
+
+// for (let key in options) {
+//     if (typeof(options[key]) === 'object') {
+//         for (let i in options[key]) {
+//             console.log(`Свойства ${i} имеет значение ${options[key][i]}`);
+            
+//         }
+//     } else {
+//         console.log(`Свойства ${key} имеет значение ${options[key]}`);
+//         counter++;
+//     }
 // }
 
-// console.log(calc(4,3));
-// console.log(calc(5,6));
-// console.log(calc(10,5));
-
-function ret() {
-    let num = 50;
-    return num;
-}
-
-const anotherNum = ret();
-
-console.log(anotherNum);
+// console.log(counter);
 
 
-
-const logger = function() {
-    console.log("hello");
-};
-
-logger();
-
-const calc = (a,b) => { 
-    console.log("1");
-    return a + b; 
-};
 
